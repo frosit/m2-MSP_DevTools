@@ -62,6 +62,7 @@
             <argument name="rules" xsi:type="array">
                 <item name="requestWith" xsi:type="object">\MSP\DevTools\Model\InjectionRules\RequestWith</item>
                 <item name="ajax" xsi:type="object">\MSP\DevTools\Model\InjectionRules\Ajax</item>
+                <item name="excluded" xsi:type="object">\MSP\DevTools\Model\InjectionRules\Excluded</item>
                 <item name="areaCode" xsi:type="object">\MSP\DevTools\Model\InjectionRules\AreaCode</item>
                 <item name="livewire" xsi:type="object">\MSP\DevTools\Model\InjectionRules\Livewire</item>
             </argument>

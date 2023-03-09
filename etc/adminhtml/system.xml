@@ -44,6 +44,9 @@
                     <label>Authorized IP list</label>
                     <comment>(eg.: 192.168.1.10, 192.168.0.0/24, 0.0.0.0/0)</comment>
                 </field>
+                <field id="excluded" translate="label comment" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Excluded</label>
+                </field>
             </group>
 
             <group id="phpstorm" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">

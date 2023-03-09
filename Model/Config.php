@@ -30,6 +30,7 @@ class Config
     public const PROTOCOL_VERSION = 3;
     public const XML_PATH_GENERAL_ENABLED = 'msp_devtools/general/enabled';
     public const XML_PATH_GENERAL_AUTHORIZED_IPS = 'msp_devtools/general/authorized_ranges';
+    public const XML_PATH_GENERAL_EXCLUDED= 'msp_devtools/general/excluded';
     public const XML_PATH_PHPSTORM_ENABLED = 'msp_devtools/phpstorm/enabled';
     public const XML_PATH_PHPSTORM_PORT = 'msp_devtools/phpstorm/port';
 
@@ -179,6 +180,15 @@ class Config
     {
         $ranges = $this->scopeConfig->getValue(self::XML_PATH_GENERAL_AUTHORIZED_IPS);
         return preg_split('/\s*[,;]+\s*/', $ranges);
+    }
+
+    /**
+     * @return false|string[]
+     */
+    public function getExcluded()
+    {
+        $excluded = explode("\n",$this->scopeConfig->getValue(self::XML_PATH_GENERAL_EXCLUDED));
+        return array_filter($excluded);
     }
 
     /**
